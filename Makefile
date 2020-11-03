@@ -1,4 +1,12 @@
 
+all:
+
+train:
+	python scripts/train.py --gpus 0,1,2,3
+
+debug:
+	python scripts/train.py --gpus 0,
+
 build:
 	python setup.py build
 
@@ -6,10 +14,10 @@ upload:
 	python setup.py bdist_wheel upload -r hobot-local
 
 clean:
-	@rm -rf build dist src/*.egg-info
+	@rm -rf build dist src/*.egg-info lightning_logs
 
 test:
-	python /usr/bin/nosetests -s tests --verbosity=2 --rednose --nologcapture
+	pytest
 
 pep8:
 	autopep8 src/mnist_pl --recursive -i
