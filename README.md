@@ -1,1 +1,3 @@
-# Machine Learning Project using pytorch-lightning
+# MNIST using pytorch-lightning
+
+This is a startup for pytorch-lighting project.

@@ -21,13 +21,13 @@ with io.open("src/mnist_pl/__init__.py", "rt", encoding="utf8") as f:
     version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
 
 setup(
-    name='mnist-pl',
+    name='mnist_pl',
     version=version,
     description='TODO',
     long_description=readme,
-    author='user',
+    author='duinodu',
     author_email='duino472365351@gmail.com',
-    url='https://github.com/user/mnist_pl',
+    url='https://github.com/duinodu/PROJECT',
     license=license,
     platform='linux',
     zip_safe=False,
@@ -36,5 +36,4 @@ setup(
     include_package_data=True,
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
     install_requires=requires,
-    entry_points={"console_scripts": ["mnist_pl = mnist_pl.cli:main"]},
 )

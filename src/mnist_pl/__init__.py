@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Introduce"""
-
-from .data import MNISTDataModule
-from .model import LitClassifier
-
+from .data import DataModule
+from .model import Model
 
 __version__ = '0.0.1'

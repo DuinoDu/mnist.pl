@@ -17,7 +17,7 @@ clean:
 	@rm -rf build dist src/*.egg-info lightning_logs
 
 test:
-	pytest
+	pytest --capture=no
 
 pep8:
 	autopep8 src/mnist_pl --recursive -i

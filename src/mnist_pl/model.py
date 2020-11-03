@@ -6,7 +6,7 @@ import pytorch_lightning as pl
 from torch.nn import functional as F
 
 
-class LitClassifier(pl.LightningModule):
+class Model(pl.LightningModule):
     def __init__(self, hidden_dim=128, learning_rate=1e-3):
         super().__init__()
         self.save_hyperparameters()
@@ -48,7 +48,3 @@ class LitClassifier(pl.LightningModule):
         parser.add_argument('--hidden_dim', type=int, default=128)
         parser.add_argument('--learning_rate', type=float, default=0.0001)
         return parser
-
-
-if __name__ == '__main__':
-    pass
